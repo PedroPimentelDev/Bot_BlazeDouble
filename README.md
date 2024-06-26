@@ -7,7 +7,7 @@
 - O bot sugere entradas e estratégias para o jogo "Double" na plataforma Blaze.
 - Histórico de entradas.
 - Alertas e notificações.
-- Estatística completa sobre acertividade e lucro.
+- Estatística completa sobre assertividade e lucro.
 
 ## Pré-requisitos
 - Python 3.
