@@ -11,6 +11,7 @@
 
 ## Pré-requisitos
 - Python 3.
+- Selenium.
 
 ## Instalação
 1. Clone o repositório:
