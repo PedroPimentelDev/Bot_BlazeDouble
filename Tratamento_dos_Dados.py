@@ -8,11 +8,15 @@ preto = "|11|10|9|8|14|13|12|"
 vermelho = "|5|6|7|1|2|3|4|"
 
 def PegarHistorico():
-    # Acessando o site
+    # Caminho do ChromeDriver
+    chrome_driver_path = r"C:\Users\ppzot\.wdm\drivers\chromedriver\win64\127.0.6533.88\chromedriver-win32\chromedriver.exe" 
     
-    # service = Service(executable_path=r"") Até o momento da criação desse código não havia um chromedriver disponivel para download
+    # Configurar o serviço do ChromeDriver
+    service = ChromeService(executable_path=chrome_driver_path)
+    options = webdriver.ChromeOptions()
 
-    driver=webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())) # Alternativa para o erro de cima
+    # Inicializar o driver do Chrome e captura os dados do site
+    driver = webdriver.Chrome(service=service, options=options)
     driver.get("https://kitblaze.com/double/")
     lista = driver.find_element(By.XPATH, '//*[@id="listagem_giros"]').text.replace('\n', "|")
     lista = lista.split('|')
